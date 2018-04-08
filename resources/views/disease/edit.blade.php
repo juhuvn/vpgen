@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Disease') }}</div>
 
@@ -31,7 +31,7 @@
                             <label for="description_vi" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="description_vi" type="text" class="form-control{{ $errors->has('description_vi') ? ' is-invalid' : '' }}" name="description_vi" value="{{ $disease->description_vi }}" required>
+                                <textarea id="description_vi" class="form-control{{ $errors->has('description_vi') ? ' is-invalid' : '' }}" name="description_vi" required>{{ $disease->description_vi }}</textarea> 
                             </div>
                         </div>
 
