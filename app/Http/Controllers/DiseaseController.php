@@ -38,4 +38,10 @@ class DiseaseController extends Controller
     	return view('disease.detail', compact('disease'));
     }
 
+    public function ajaxGetDetail($id) {
+        $disease = Disease::where('id',$id)->firstOrFail();
+
+        return view('disease.ajax_disease_detail', compact(['disease']))->render();
+    }
+
 }

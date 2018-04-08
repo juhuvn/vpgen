@@ -29,7 +29,8 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/disease', 'DiseaseController@index')->name('disease');
 	Route::get('/disease/edit/{id}', 'DiseaseController@edit')->name('disease.edit');
 	Route::get('/disease/detail/{id}', 'DiseaseController@detail')->name('disease.detail');
-	Route::post('/disease/edit/{id}', 'DiseaseController@update')->name('disease.update');	
+	Route::post('/disease/edit/{id}', 'DiseaseController@update')->name('disease.update');
+	Route::get('disease/ajax/detail/{id}', 'DiseaseController@ajaxGetDetail')->name('disease.ajax.getDetail');
 
 	Route::get('/gene', 'DiseaseController@index')->name('gene');
 	Route::get('/gene/edit/{id}', 'DiseaseController@edit')->name('gene.edit');
