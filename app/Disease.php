@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Diseases extends Model
+class Disease extends Model
 {
-    //
+    protected $guarded = array();
 }
