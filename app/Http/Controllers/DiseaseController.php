@@ -44,4 +44,6 @@ class DiseaseController extends Controller
         return view('disease.ajax_disease_detail', compact(['disease']))->render();
     }
 
+    public function modify(){}
+
 }
